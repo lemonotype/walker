@@ -334,7 +334,7 @@ fun SettingsSheet(useMiles: Boolean, onUnits: (Boolean) -> Unit, onClose: () -> 
         Spacer(Modifier.height(20.dp))
         Mono("Belt range 0.8–6.4 km/h. Calories are approximate. Sessions sync to Health Connect on END.", 11.sp, FontWeight.Normal, Color.Gray)
         Spacer(Modifier.height(24.dp))
-        Text("made by lemonotype, hack all the things",
+        Text("made by lemonotype & claude",
             fontFamily = FontFamily.Monospace, fontSize = 11.sp,
             fontWeight = FontWeight.Bold, color = Color.Gray,
             textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth())

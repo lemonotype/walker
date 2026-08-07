@@ -54,11 +54,10 @@ The console connects to the base with a 7-pin cable. On our TR1000-DT:
 | **Red** | +5V *bias* rail (weak! signal reference only) | Shifter **HV** |
 | **Orange** | MCB's RX — commands go in here | Shifter **HV1** ← **LV1** ← ESP32 **GPIO16** |
 | **Yellow** | MCB's TX — telemetry comes out here | Shifter **HV2** ← **LV2** ← ESP32 **GPIO17** |
-| **Brown** | +12V console supply (the real power) | Bridge to blue; optionally → buck → ESP32 |
+| **Brown** | +12V console supply (the real power) | **Bridge to blue**, and buck **IN+** |
 | **Blue** | Enable/presence sense | **Bridge to brown** (motor will not run otherwise) |
-| **Green** | Unused (verified by removal) | Tape it off |
+| **Green** | Ground return (GND-ish) | Buck **IN−** (as built) — or leave unused |
 | ESP32 **3V3** | | Shifter **LV** |
-| ESP32 **VIN** | | Shifter **HV** (props the 5V rail; power ESP32 by USB or buck) |
 
 Verification ritual before trusting any color: with the treadmill powered and
 console absent, black↔red ≈ 5V, brown↔blue ≈ 12V (across the *pair* — it can
@@ -71,9 +70,24 @@ production runs.
    Power the ESP32 from USB, or from brown 12V through a buck converter
    (which conveniently sits exactly where the console's own power draw sat).
 
-Twist orange+black and yellow+black into pairs and keep them away from the
-motor: the drive corrupts a large fraction of telemetry replies otherwise
-(harmless — the firmware tolerates it — but tidy pairs make it near-zero).
+## As built: powered by the treadmill itself
+
+The finished install runs with **no external cables at all**: the buck
+converter's **red input lead → the brown+blue bridge node (+12V)**, its
+**black input lead → green (ground return)**, and its USB-C output powers
+the ESP32. ESP32 + level shifter + buck all fit inside the treadmill base.
+
+### ☠️ BIG WARNING — READ BEFORE OPENING THE BASE
+
+The base contains mains voltage **and big capacitors that stay charged after
+you pull the plug**. In the words of the author, who found out empirically:
+
+> even with power pulled I touched something that almost blasted my balls off
+
+That something was the motor-drive capacitor bank (there's a 470µF capacitor
+in there that sits at up to ~400V). Unplug, **wait several minutes**, keep
+your fingers away from the power-supply corner of the board, work
+one-handed near it, and never trust a capacitor to be empty.
 
 ## Flashing the ESP32
 
@@ -163,7 +177,7 @@ one evening of human-and-Claude vs. seven mystery wires.
   capture of the wired console protocol; register map confirmation
 - The [daeken gist](https://gist.github.com/daeken/a3d3c4da11ca1c2d2b84)
   comment crew — pinouts, MCU identification, years of breadcrumbs
-- made by **lemonotype** — hack all the things
+- made by **lemonotype & claude**
 
 ## License
 

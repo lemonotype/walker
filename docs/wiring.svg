@@ -53,8 +53,6 @@
   <rect x="830" y="120" width="230" height="280" fill="#111111" stroke="#ffffff" stroke-width="2"/>
   <text x="852" y="150" fill="#ffffff" font-size="15" font-weight="bold">ESP32 DEVKIT</text>
   <text x="852" y="166" fill="#888888" font-size="11">WROOM-32 classic</text>
-  <circle cx="830" cy="190" r="4" fill="#ffffff"/>
-  <text x="840" y="194" fill="#cccccc" font-size="11">VIN (5V)</text>
   <circle cx="830" cy="220" r="4" fill="#ffffff"/>
   <text x="840" y="224" fill="#cccccc" font-size="11">3V3</text>
   <circle cx="830" cy="250" r="4" fill="#ffffff"/>
@@ -73,20 +71,15 @@
   <circle cx="420" cy="620" r="4" fill="#ffffff"/>
   <text x="430" y="624" fill="#cccccc" font-size="11">IN+ (12V)</text>
   <circle cx="420" cy="650" r="4" fill="#ffffff"/>
-  <text x="430" y="654" fill="#cccccc" font-size="11">IN− (GND)</text>
+  <text x="430" y="654" fill="#cccccc" font-size="11">IN− (GND ← green)</text>
   <circle cx="650" cy="620" r="4" fill="#d6ff00"/>
 
   <!-- ============ WIRES ============ -->
   <!-- RED: MCB -> HV -->
   <path d="M240,200 L400,200 L400,220 L450,220" stroke="#ff4136" stroke-width="3" fill="none"/>
-  <!-- 5V rail jumper (dashed): HV rail up & over to VIN -->
-  <path d="M540,160 L540,100 L790,100 L790,190 L830,190" stroke="#ff4136" stroke-width="2" stroke-dasharray="6,4" fill="none"/>
-  <text x="560" y="92" fill="#ff4136" font-size="11">jumper: HV rail ↔ VIN (ESP32 backs up the weak 5V rail)</text>
 
-  <!-- BLACK: MCB -> shifter GND; branch down (left) to buck IN-; LV GND -> ESP32 GND -->
+  <!-- BLACK: MCB -> shifter GND; LV GND -> ESP32 GND -->
   <path d="M240,240 L410,240 L410,250 L450,250" stroke="#bbbbbb" stroke-width="3" fill="none"/>
-  <circle cx="262" cy="240" r="5" fill="#bbbbbb"/>
-  <path d="M262,240 L262,650 L420,650" stroke="#bbbbbb" stroke-width="3" fill="none"/>
   <path d="M630,250 L830,250" stroke="#bbbbbb" stroke-width="3" fill="none"/>
 
   <!-- ORANGE: commands toward MCB -->
@@ -114,9 +107,9 @@
   <text x="325" y="420" fill="#d6ff00" font-size="12" font-weight="bold">BRIDGE</text>
   <text x="325" y="435" fill="#888888" font-size="11">motor enable — required</text>
 
-  <!-- GREEN: taped off -->
-  <path d="M240,480 L290,480" stroke="#2ecc40" stroke-width="3" fill="none"/>
-  <text x="320" y="485" fill="#2ecc40" font-size="12" font-weight="bold">✕ unused — tape off</text>
+  <!-- GREEN: ground return for the buck -->
+  <path d="M240,480 L262,480 L262,650 L420,650" stroke="#2ecc40" stroke-width="3" fill="none"/>
+  <text x="320" y="485" fill="#2ecc40" font-size="12" font-weight="bold">ground return → buck IN−</text>
 
   <!-- BUCK OUT: USB-C to ESP32 -->
   <path d="M650,620 L945,620 L945,408" stroke="#d6ff00" stroke-width="3" fill="none"/>
@@ -125,8 +118,8 @@
   <!-- ============ NOTES ============ -->
   <text x="40" y="706" fill="#ffffff" font-size="12" font-weight="bold">NOTES</text>
   <text x="40" y="724" fill="#888888" font-size="11">· RED is a weak bias rail: it powers ONLY the shifter — never the ESP32 (it collapses under load)</text>
-  <text x="40" y="740" fill="#888888" font-size="11">· Twist ORANGE+BLACK and YELLOW+BLACK into pairs; route away from the motor (EMI)</text>
-  <text x="40" y="756" fill="#888888" font-size="11">· BROWN+BLUE must stay bridged or the belt will not move · UNPLUG THE TREADMILL before wiring — mains inside.</text>
+  <text x="40" y="740" fill="#888888" font-size="11">· BROWN+BLUE bridged = motor enable (required) · GREEN = ground return, used for the buck's IN−</text>
+  <text x="40" y="756" fill="#ff4136" font-size="11">· UNPLUG BEFORE WIRING — and capacitors inside hold charge even unplugged. See the README warning.</text>
 
-  <text x="40" y="786" fill="#444444" font-size="11">github.com/lemonotype/walker · made by lemonotype, hack all the things</text>
+  <text x="40" y="786" fill="#444444" font-size="11">github.com/lemonotype/walker · made by lemonotype &amp; claude</text>
 </svg>

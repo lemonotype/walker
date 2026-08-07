@@ -330,7 +330,7 @@ struct ContentView: View {
                         .foregroundStyle(.secondary)
                 }
                 Section {
-                    Text("made by lemonotype, hack all the things")
+                    Text("made by lemonotype & claude")
                         .font(.system(.caption, design: .monospaced).weight(.bold))
                         .frame(maxWidth: .infinity, alignment: .center)
                         .foregroundStyle(.secondary)
