@@ -44,6 +44,8 @@ before touching wiring. No warranty of any kind; you do this at your own risk.
 
 ## Wiring (TR1000-DT wire colors — VERIFY YOURS)
 
+![Wiring diagram](docs/wiring.svg)
+
 The console connects to the base with a 7-pin cable. On our TR1000-DT:
 
 | Wire | Role (verified) | Connect to |

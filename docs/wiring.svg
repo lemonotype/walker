@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="800" viewBox="0 0 1100 800" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+  <rect width="1100" height="800" fill="#0a0a0a"/>
+
+  <text x="40" y="44" fill="#ffffff" font-size="22" font-weight="bold" letter-spacing="2">WALKER — WIRING</text>
+  <text x="40" y="66" fill="#888888" font-size="13">LifeSpan TR1000-DT · verify YOUR wire colors with a multimeter first</text>
+
+  <!-- ============ TREADMILL BASE (MCB) ============ -->
+  <rect x="40" y="90" width="200" height="420" fill="#111111" stroke="#ffffff" stroke-width="2"/>
+  <text x="60" y="118" fill="#ffffff" font-size="15" font-weight="bold">TREADMILL</text>
+  <text x="60" y="136" fill="#888888" font-size="12">BASE (MCB)</text>
+  <text x="60" y="158" fill="#888888" font-size="11">7-pin console cable</text>
+
+  <!-- pins on right edge -->
+  <circle cx="240" cy="200" r="4" fill="#ff4136"/>
+  <text x="150" y="195" fill="#ff4136" font-size="12" font-weight="bold">RED 5V</text>
+  <circle cx="240" cy="240" r="4" fill="#bbbbbb"/>
+  <text x="132" y="235" fill="#bbbbbb" font-size="12" font-weight="bold">BLACK GND</text>
+  <circle cx="240" cy="280" r="4" fill="#ff851b"/>
+  <text x="150" y="275" fill="#ff851b" font-size="12" font-weight="bold">ORANGE</text>
+  <circle cx="240" cy="320" r="4" fill="#ffdc00"/>
+  <text x="150" y="315" fill="#ffdc00" font-size="12" font-weight="bold">YELLOW</text>
+  <circle cx="240" cy="380" r="4" fill="#a0642c"/>
+  <text x="153" y="375" fill="#a0642c" font-size="12" font-weight="bold">BROWN</text>
+  <text x="120" y="393" fill="#a0642c" font-size="11">+12V supply</text>
+  <circle cx="240" cy="430" r="4" fill="#4a90d9"/>
+  <text x="168" y="425" fill="#4a90d9" font-size="12" font-weight="bold">BLUE</text>
+  <text x="112" y="443" fill="#4a90d9" font-size="11">enable sense</text>
+  <circle cx="240" cy="480" r="4" fill="#2ecc40"/>
+  <text x="158" y="476" fill="#2ecc40" font-size="12" font-weight="bold">GREEN</text>
+
+  <!-- ============ LEVEL SHIFTER ============ -->
+  <rect x="450" y="160" width="180" height="200" fill="#111111" stroke="#ffffff" stroke-width="2"/>
+  <text x="472" y="188" fill="#ffffff" font-size="14" font-weight="bold">LEVEL SHIFTER</text>
+  <text x="472" y="204" fill="#888888" font-size="11">BSS138 · 4 channel</text>
+  <circle cx="450" cy="220" r="4" fill="#ffffff"/>
+  <text x="460" y="224" fill="#cccccc" font-size="11">HV</text>
+  <circle cx="450" cy="250" r="4" fill="#ffffff"/>
+  <text x="460" y="254" fill="#cccccc" font-size="11">GND</text>
+  <circle cx="450" cy="280" r="4" fill="#ffffff"/>
+  <text x="460" y="284" fill="#cccccc" font-size="11">HV1</text>
+  <circle cx="450" cy="320" r="4" fill="#ffffff"/>
+  <text x="460" y="324" fill="#cccccc" font-size="11">HV2</text>
+  <circle cx="630" cy="220" r="4" fill="#ffffff"/>
+  <text x="606" y="224" fill="#cccccc" font-size="11">LV</text>
+  <circle cx="630" cy="250" r="4" fill="#ffffff"/>
+  <text x="598" y="254" fill="#cccccc" font-size="11">GND</text>
+  <circle cx="630" cy="280" r="4" fill="#ffffff"/>
+  <text x="602" y="284" fill="#cccccc" font-size="11">LV1</text>
+  <circle cx="630" cy="320" r="4" fill="#ffffff"/>
+  <text x="602" y="324" fill="#cccccc" font-size="11">LV2</text>
+
+  <!-- ============ ESP32 ============ -->
+  <rect x="830" y="120" width="230" height="280" fill="#111111" stroke="#ffffff" stroke-width="2"/>
+  <text x="852" y="150" fill="#ffffff" font-size="15" font-weight="bold">ESP32 DEVKIT</text>
+  <text x="852" y="166" fill="#888888" font-size="11">WROOM-32 classic</text>
+  <circle cx="830" cy="190" r="4" fill="#ffffff"/>
+  <text x="840" y="194" fill="#cccccc" font-size="11">VIN (5V)</text>
+  <circle cx="830" cy="220" r="4" fill="#ffffff"/>
+  <text x="840" y="224" fill="#cccccc" font-size="11">3V3</text>
+  <circle cx="830" cy="250" r="4" fill="#ffffff"/>
+  <text x="840" y="254" fill="#cccccc" font-size="11">GND</text>
+  <circle cx="830" cy="280" r="4" fill="#ffffff"/>
+  <text x="840" y="284" fill="#cccccc" font-size="11">GPIO16 · our TX → MCB</text>
+  <circle cx="830" cy="320" r="4" fill="#ffffff"/>
+  <text x="840" y="324" fill="#cccccc" font-size="11">GPIO17 · our RX ← MCB</text>
+  <rect x="920" y="392" width="50" height="16" fill="#0a0a0a" stroke="#d6ff00" stroke-width="2"/>
+  <text x="922" y="424" fill="#d6ff00" font-size="11" font-weight="bold">USB-C</text>
+
+  <!-- ============ BUCK CONVERTER ============ -->
+  <rect x="420" y="560" width="230" height="110" fill="#111111" stroke="#d6ff00" stroke-width="2"/>
+  <text x="442" y="588" fill="#d6ff00" font-size="14" font-weight="bold">BUCK CONVERTER</text>
+  <text x="442" y="604" fill="#888888" font-size="11">8–32V in → 5V USB-C out</text>
+  <circle cx="420" cy="620" r="4" fill="#ffffff"/>
+  <text x="430" y="624" fill="#cccccc" font-size="11">IN+ (12V)</text>
+  <circle cx="420" cy="650" r="4" fill="#ffffff"/>
+  <text x="430" y="654" fill="#cccccc" font-size="11">IN− (GND)</text>
+  <circle cx="650" cy="620" r="4" fill="#d6ff00"/>
+
+  <!-- ============ WIRES ============ -->
+  <!-- RED: MCB -> HV -->
+  <path d="M240,200 L400,200 L400,220 L450,220" stroke="#ff4136" stroke-width="3" fill="none"/>
+  <!-- 5V rail jumper (dashed): HV rail up & over to VIN -->
+  <path d="M540,160 L540,100 L790,100 L790,190 L830,190" stroke="#ff4136" stroke-width="2" stroke-dasharray="6,4" fill="none"/>
+  <text x="560" y="92" fill="#ff4136" font-size="11">jumper: HV rail ↔ VIN (ESP32 backs up the weak 5V rail)</text>
+
+  <!-- BLACK: MCB -> shifter GND; branch down (left) to buck IN-; LV GND -> ESP32 GND -->
+  <path d="M240,240 L410,240 L410,250 L450,250" stroke="#bbbbbb" stroke-width="3" fill="none"/>
+  <circle cx="262" cy="240" r="5" fill="#bbbbbb"/>
+  <path d="M262,240 L262,650 L420,650" stroke="#bbbbbb" stroke-width="3" fill="none"/>
+  <path d="M630,250 L830,250" stroke="#bbbbbb" stroke-width="3" fill="none"/>
+
+  <!-- ORANGE: commands toward MCB -->
+  <path d="M240,280 L450,280" stroke="#ff851b" stroke-width="3" fill="none"/>
+  <path d="M630,280 L830,280" stroke="#ff851b" stroke-width="3" fill="none"/>
+  <text x="330" y="272" fill="#ff851b" font-size="11">◀ commands</text>
+
+  <!-- YELLOW: telemetry toward ESP32 -->
+  <path d="M240,320 L450,320" stroke="#ffdc00" stroke-width="3" fill="none"/>
+  <path d="M630,320 L830,320" stroke="#ffdc00" stroke-width="3" fill="none"/>
+  <text x="330" y="340" fill="#ffdc00" font-size="11">telemetry ▶</text>
+
+  <!-- 3V3: ESP32 -> LV -->
+  <path d="M630,220 L830,220" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <text x="672" y="214" fill="#cccccc" font-size="11">3V3 reference</text>
+
+  <!-- BROWN: to bridge, branch down to buck IN+ -->
+  <path d="M240,380 L310,380" stroke="#a0642c" stroke-width="3" fill="none"/>
+  <circle cx="285" cy="380" r="5" fill="#a0642c"/>
+  <path d="M310,380 L310,620 L420,620" stroke="#a0642c" stroke-width="3" fill="none"/>
+  <!-- BLUE to bridge -->
+  <path d="M240,430 L285,430" stroke="#4a90d9" stroke-width="3" fill="none"/>
+  <!-- BRIDGE -->
+  <path d="M285,380 L285,430" stroke="#d6ff00" stroke-width="4" fill="none"/>
+  <text x="325" y="420" fill="#d6ff00" font-size="12" font-weight="bold">BRIDGE</text>
+  <text x="325" y="435" fill="#888888" font-size="11">motor enable — required</text>
+
+  <!-- GREEN: taped off -->
+  <path d="M240,480 L290,480" stroke="#2ecc40" stroke-width="3" fill="none"/>
+  <text x="320" y="485" fill="#2ecc40" font-size="12" font-weight="bold">✕ unused — tape off</text>
+
+  <!-- BUCK OUT: USB-C to ESP32 -->
+  <path d="M650,620 L945,620 L945,408" stroke="#d6ff00" stroke-width="3" fill="none"/>
+  <text x="672" y="640" fill="#d6ff00" font-size="11">USB-C cable (or skip the buck: any USB wall charger works)</text>
+
+  <!-- ============ NOTES ============ -->
+  <text x="40" y="706" fill="#ffffff" font-size="12" font-weight="bold">NOTES</text>
+  <text x="40" y="724" fill="#888888" font-size="11">· RED is a weak bias rail: it powers ONLY the shifter — never the ESP32 (it collapses under load)</text>
+  <text x="40" y="740" fill="#888888" font-size="11">· Twist ORANGE+BLACK and YELLOW+BLACK into pairs; route away from the motor (EMI)</text>
+  <text x="40" y="756" fill="#888888" font-size="11">· BROWN+BLUE must stay bridged or the belt will not move · UNPLUG THE TREADMILL before wiring — mains inside.</text>
+
+  <text x="40" y="786" fill="#444444" font-size="11">github.com/lemonotype/walker · made by lemonotype, hack all the things</text>
+</svg>
