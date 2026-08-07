@@ -89,6 +89,14 @@ in there that sits at up to ~400V). Unplug, **wait several minutes**, keep
 your fingers away from the power-supply corner of the board, work
 one-handed near it, and never trust a capacitor to be empty.
 
+## Build photos
+
+| | |
+|---|---|
+| ![Breadboard prototype](docs/photos/01-breadboard-prototype.jpg) *Breadboard prototype: ESP32 + level shifter tapped into the console cable* | ![Spliced console cable](docs/photos/02-console-cable-spliced.jpg) *The 7-pin console cable, spliced* |
+| ![Parts](docs/photos/03-esp32-shifter-buck.jpg) *The whole brain: ESP32, level shifter, 12V→5V buck* | ![Soldered assembly](docs/photos/04-soldered-assembly.jpg) *Breadboard retired — soldered for the final install* |
+| ![Inside the base](docs/photos/05-inside-the-base.jpg) *Everything tucked into the base* | ![Base open](docs/photos/06-base-open-mcb.jpg) *The base open: motor, EMI filter, MCB — and the capacitors that bite* |
+
 ## Flashing the ESP32
 
 ```bash
