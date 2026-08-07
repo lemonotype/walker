@@ -1,0 +1,55 @@
+name: LifeSpanWalk
+options:
+  bundleIdPrefix: com.lemonotype
+  deploymentTarget:
+    iOS: "17.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  LifeSpanWalk:
+    type: application
+    platform: iOS
+    sources:
+      - path: LifeSpanWalk
+      - path: Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.lemonotype.lifespanwalk
+        CODE_SIGN_ENTITLEMENTS: LifeSpanWalk/LifeSpanWalk.entitlements
+        TARGETED_DEVICE_FAMILY: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+    info:
+      path: LifeSpanWalk/Info.plist
+      properties:
+        CFBundleDisplayName: Walker
+        UILaunchScreen: {}
+        NSBluetoothAlwaysUsageDescription: Connects to your treadmill over Bluetooth to control it and read workout data.
+        NSHealthShareUsageDescription: Used to save your walking workouts to Apple Health.
+        NSHealthUpdateUsageDescription: Saves your walking workouts, distance, energy and steps to Apple Health.
+        UIBackgroundModes: [bluetooth-central]
+        NSSupportsLiveActivities: true
+        ITSAppUsesNonExemptEncryption: false
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+    dependencies:
+      - target: WalkWidgets
+        embed: true
+  WalkWidgets:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: WalkWidgets
+      - path: Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.lemonotype.lifespanwalk.widgets
+        SKIP_INSTALL: YES
+    info:
+      path: WalkWidgets/Info.plist
+      properties:
+        CFBundleDisplayName: WalkWidgets
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension

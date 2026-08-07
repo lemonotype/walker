@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# iOS
+ios/LifeSpanWalk/LifeSpanWalk.xcodeproj/xcuserdata/
+ios/LifeSpanWalk/build/
+DerivedData/
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+# Release keystore: the checked-in one is for convenience of the hobby
+# sideload build. If you fork this seriously, generate your own:
+#   keytool -genkeypair -keystore walker-release.keystore -alias walker ...
+
+# Arduino
+firmware/**/build/

@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08DCC5F7BE23BCC427F14325 /* ToggleWalkIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A6C4188DF9509FCCDFFDE /* ToggleWalkIntent.swift */; };
+		115D52E1A7180A6650D1EE90 /* WalkWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 87BB8957CD8D4CA4DB5E9973 /* WalkWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		13A0EAEA46ADC43929C5744B /* ToggleWalkIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A6C4188DF9509FCCDFFDE /* ToggleWalkIntent.swift */; };
+		2C503B9386F8FE2737712A89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FDF12C2291B7839A323B576 /* Assets.xcassets */; };
+		3B934BD75B4990410B684F0D /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA7278F7695315CE8B8481F /* HealthStore.swift */; };
+		40507A307CC0BE646A7F5AD0 /* LiveActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2C4C545D908517B5668AA /* LiveActivityController.swift */; };
+		6DD36181EBEA9312F1E32C10 /* WalkActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD334CCFFCAD435EC6267087 /* WalkActivityAttributes.swift */; };
+		77D8F27D5A680058DA4F63C0 /* WalkWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D029F14BF46D58EDB95B816 /* WalkWidgetsBundle.swift */; };
+		8E9C4E9FF302A460D024C0CC /* WalkActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD334CCFFCAD435EC6267087 /* WalkActivityAttributes.swift */; };
+		9731334546FA1B50E2D51165 /* LifeSpanWalkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE415F8D83E070BFDBC82056 /* LifeSpanWalkApp.swift */; };
+		BA5B30421C7A3B79D8A42259 /* TreadmillManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F393F73A93E6877101A4C /* TreadmillManager.swift */; };
+		CED5EACD4CD247C5161FC00C /* WalkLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DC6D1C0442628C6CBF6ED /* WalkLiveActivity.swift */; };
+		DC9144C2AE26D4CF6A630785 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545750F806FF1032514E53F9 /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2AE208D06899B02218B84391 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB87E549D3FAAACDBB8A5279 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B3A9BE1493AF29CBE1A81D1;
+			remoteInfo = WalkWidgets;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8A34B6F001D3444EC7074B43 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				115D52E1A7180A6650D1EE90 /* WalkWidgets.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		076DC6D1C0442628C6CBF6ED /* WalkLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkLiveActivity.swift; sourceTree = "<group>"; };
+		1FDF12C2291B7839A323B576 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A706E115B411CBBFFE4B064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2AA7278F7695315CE8B8481F /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
+		545750F806FF1032514E53F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7D029F14BF46D58EDB95B816 /* WalkWidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkWidgetsBundle.swift; sourceTree = "<group>"; };
+		7D4A6C4188DF9509FCCDFFDE /* ToggleWalkIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleWalkIntent.swift; sourceTree = "<group>"; };
+		87BB8957CD8D4CA4DB5E9973 /* WalkWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WalkWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		981C62D00DF18910DFF0BAC3 /* LifeSpanWalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LifeSpanWalk.entitlements; sourceTree = "<group>"; };
+		AD334CCFFCAD435EC6267087 /* WalkActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkActivityAttributes.swift; sourceTree = "<group>"; };
+		CC4F393F73A93E6877101A4C /* TreadmillManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreadmillManager.swift; sourceTree = "<group>"; };
+		CE415F8D83E070BFDBC82056 /* LifeSpanWalkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeSpanWalkApp.swift; sourceTree = "<group>"; };
+		D8E3928649DFF12A1213B9DC /* LifeSpanWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeSpanWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3F2C4C545D908517B5668AA /* LiveActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityController.swift; sourceTree = "<group>"; };
+		F368D474723D8C036742B9FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0A8AA78CE372771C8AD3638F /* WalkWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				F368D474723D8C036742B9FC /* Info.plist */,
+				076DC6D1C0442628C6CBF6ED /* WalkLiveActivity.swift */,
+				7D029F14BF46D58EDB95B816 /* WalkWidgetsBundle.swift */,
+			);
+			path = WalkWidgets;
+			sourceTree = "<group>";
+		};
+		5720843724490BCCD642F773 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				7D4A6C4188DF9509FCCDFFDE /* ToggleWalkIntent.swift */,
+				AD334CCFFCAD435EC6267087 /* WalkActivityAttributes.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		877C4BBA3811F0B4D61DB17D /* LifeSpanWalk */ = {
+			isa = PBXGroup;
+			children = (
+				1FDF12C2291B7839A323B576 /* Assets.xcassets */,
+				545750F806FF1032514E53F9 /* ContentView.swift */,
+				2AA7278F7695315CE8B8481F /* HealthStore.swift */,
+				2A706E115B411CBBFFE4B064 /* Info.plist */,
+				981C62D00DF18910DFF0BAC3 /* LifeSpanWalk.entitlements */,
+				CE415F8D83E070BFDBC82056 /* LifeSpanWalkApp.swift */,
+				E3F2C4C545D908517B5668AA /* LiveActivityController.swift */,
+				CC4F393F73A93E6877101A4C /* TreadmillManager.swift */,
+			);
+			path = LifeSpanWalk;
+			sourceTree = "<group>";
+		};
+		B81D5E01D99D321B15BBAE44 = {
+			isa = PBXGroup;
+			children = (
+				877C4BBA3811F0B4D61DB17D /* LifeSpanWalk */,
+				5720843724490BCCD642F773 /* Shared */,
+				0A8AA78CE372771C8AD3638F /* WalkWidgets */,
+				D503468457247F3444E1FD22 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D503468457247F3444E1FD22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8E3928649DFF12A1213B9DC /* LifeSpanWalk.app */,
+				87BB8957CD8D4CA4DB5E9973 /* WalkWidgets.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DF301175E05B8D4C65E0998 /* LifeSpanWalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06170C974E7A6CAAAB4AE649 /* Build configuration list for PBXNativeTarget "LifeSpanWalk" */;
+			buildPhases = (
+				81CD18C27CB26D819FDFA6B9 /* Sources */,
+				C8754FB75B474E4C299C0742 /* Resources */,
+				8A34B6F001D3444EC7074B43 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E33C7BBFD4AA2DEDEFFE51DF /* PBXTargetDependency */,
+			);
+			name = LifeSpanWalk;
+			packageProductDependencies = (
+			);
+			productName = LifeSpanWalk;
+			productReference = D8E3928649DFF12A1213B9DC /* LifeSpanWalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8B3A9BE1493AF29CBE1A81D1 /* WalkWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B5AD7D110B8BEB3E732865E /* Build configuration list for PBXNativeTarget "WalkWidgets" */;
+			buildPhases = (
+				81063765C9D5F34A24420F4C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WalkWidgets;
+			packageProductDependencies = (
+			);
+			productName = WalkWidgets;
+			productReference = 87BB8957CD8D4CA4DB5E9973 /* WalkWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB87E549D3FAAACDBB8A5279 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = 540D17A8C7545D624972015F /* Build configuration list for PBXProject "LifeSpanWalk" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = B81D5E01D99D321B15BBAE44;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D503468457247F3444E1FD22 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DF301175E05B8D4C65E0998 /* LifeSpanWalk */,
+				8B3A9BE1493AF29CBE1A81D1 /* WalkWidgets */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C8754FB75B474E4C299C0742 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C503B9386F8FE2737712A89 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81063765C9D5F34A24420F4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08DCC5F7BE23BCC427F14325 /* ToggleWalkIntent.swift in Sources */,
+				6DD36181EBEA9312F1E32C10 /* WalkActivityAttributes.swift in Sources */,
+				CED5EACD4CD247C5161FC00C /* WalkLiveActivity.swift in Sources */,
+				77D8F27D5A680058DA4F63C0 /* WalkWidgetsBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81CD18C27CB26D819FDFA6B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC9144C2AE26D4CF6A630785 /* ContentView.swift in Sources */,
+				3B934BD75B4990410B684F0D /* HealthStore.swift in Sources */,
+				9731334546FA1B50E2D51165 /* LifeSpanWalkApp.swift in Sources */,
+				40507A307CC0BE646A7F5AD0 /* LiveActivityController.swift in Sources */,
+				13A0EAEA46ADC43929C5744B /* ToggleWalkIntent.swift in Sources */,
+				BA5B30421C7A3B79D8A42259 /* TreadmillManager.swift in Sources */,
+				8E9C4E9FF302A460D024C0CC /* WalkActivityAttributes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E33C7BBFD4AA2DEDEFFE51DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B3A9BE1493AF29CBE1A81D1 /* WalkWidgets */;
+			targetProxy = 2AE208D06899B02218B84391 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01A8F1C292DC9926E9E6983B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = A4RTBW9SM4;
+				INFOPLIST_FILE = WalkWidgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lemonotype.lifespanwalk.widgets;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0296690574BC3EFBF82A04E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		266967A50A2D005CE20AA2E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LifeSpanWalk/LifeSpanWalk.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = A4RTBW9SM4;
+				INFOPLIST_FILE = LifeSpanWalk/Info.plist;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lemonotype.lifespanwalk;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		333B61EB0B5BDDE295160AC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		E290675F782BF9D50EC161E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = A4RTBW9SM4;
+				INFOPLIST_FILE = WalkWidgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lemonotype.lifespanwalk.widgets;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA32935760DCF116F9436A00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LifeSpanWalk/LifeSpanWalk.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = A4RTBW9SM4;
+				INFOPLIST_FILE = LifeSpanWalk/Info.plist;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lemonotype.lifespanwalk;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06170C974E7A6CAAAB4AE649 /* Build configuration list for PBXNativeTarget "LifeSpanWalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA32935760DCF116F9436A00 /* Debug */,
+				266967A50A2D005CE20AA2E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		540D17A8C7545D624972015F /* Build configuration list for PBXProject "LifeSpanWalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0296690574BC3EFBF82A04E8 /* Debug */,
+				333B61EB0B5BDDE295160AC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7B5AD7D110B8BEB3E732865E /* Build configuration list for PBXNativeTarget "WalkWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E290675F782BF9D50EC161E3 /* Debug */,
+				01A8F1C292DC9926E9E6983B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB87E549D3FAAACDBB8A5279 /* Project object */;
+}
