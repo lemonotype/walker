@@ -124,6 +124,16 @@ The firmware advertises as **"LifeSpan TR1000"** with standard FTMS
 
 ## iOS app (Walker)
 
+| Main | Settings | Lock screen |
+|---|---|---|
+| ![Main screen](docs/photos/app-ios-main.webp) | ![Settings](docs/photos/app-ios-settings.webp) | ![Lock screen](docs/photos/app-ios-lockscreen.webp) |
+
+**Known bug:** the lock-screen play/pause button may still demand Face ID /
+passcode before acting. `authenticationPolicy = .alwaysAllowed` is set (as a
+stored property, as required), but iOS couldn't be reliably convinced —
+sometimes it just works, sometimes it asks. If you figure out the missing
+incantation, a PR would make a lot of walkers happy.
+
 Sideloading needs a Mac with Xcode and an Apple ID (free works, re-sign
 weekly; a paid dev account makes it permanent + TestFlight-able).
 

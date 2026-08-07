@@ -61,8 +61,10 @@ anything; it encodes lessons that cost real debugging hours.
    reference. Preserve this pattern in any port.
 4. **iOS App Intents:** `authenticationPolicy` must be a STORED property
    (`static var x: T = .alwaysAllowed`) — computed properties are silently
-   dropped by the metadata extractor and lock-screen buttons start demanding
-   Face ID again.
+   dropped by the metadata extractor. KNOWN OPEN BUG even with that: iOS
+   still sometimes demands Face ID for the lock-screen play/pause intent.
+   Never fully solved; if you're asked to fix it, investigate rather than
+   assuming the stored property is sufficient.
 5. UART1 on ESP32: never begin() with pin -1 — the core falls back to
    GPIO9/10 (flash pins) and corrupts everything.
 6. Speed values are unit-less on the wire. Both apps are km/h-native with
