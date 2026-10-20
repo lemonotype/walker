@@ -54,12 +54,12 @@
 		545750F806FF1032514E53F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D029F14BF46D58EDB95B816 /* WalkWidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkWidgetsBundle.swift; sourceTree = "<group>"; };
 		7D4A6C4188DF9509FCCDFFDE /* ToggleWalkIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleWalkIntent.swift; sourceTree = "<group>"; };
-		87BB8957CD8D4CA4DB5E9973 /* WalkWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WalkWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		87BB8957CD8D4CA4DB5E9973 /* WalkWidgets.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = WalkWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		981C62D00DF18910DFF0BAC3 /* LifeSpanWalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LifeSpanWalk.entitlements; sourceTree = "<group>"; };
 		AD334CCFFCAD435EC6267087 /* WalkActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkActivityAttributes.swift; sourceTree = "<group>"; };
 		CC4F393F73A93E6877101A4C /* TreadmillManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreadmillManager.swift; sourceTree = "<group>"; };
 		CE415F8D83E070BFDBC82056 /* LifeSpanWalkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeSpanWalkApp.swift; sourceTree = "<group>"; };
-		D8E3928649DFF12A1213B9DC /* LifeSpanWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeSpanWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8E3928649DFF12A1213B9DC /* LifeSpanWalk.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = LifeSpanWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F2C4C545D908517B5668AA /* LiveActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityController.swift; sourceTree = "<group>"; };
 		F368D474723D8C036742B9FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +166,8 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 540D17A8C7545D624972015F /* Build configuration list for PBXProject "LifeSpanWalk" */;
 			developmentRegion = en;
@@ -238,7 +240,6 @@
 		01A8F1C292DC9926E9E6983B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = A4RTBW9SM4;
 				INFOPLIST_FILE = WalkWidgets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,7 +306,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -323,7 +324,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = LifeSpanWalk/LifeSpanWalk.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = A4RTBW9SM4;
 				INFOPLIST_FILE = LifeSpanWalk/Info.plist;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -383,7 +383,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -397,7 +397,6 @@
 		E290675F782BF9D50EC161E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = A4RTBW9SM4;
 				INFOPLIST_FILE = WalkWidgets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -417,7 +416,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = LifeSpanWalk/LifeSpanWalk.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = A4RTBW9SM4;
 				INFOPLIST_FILE = LifeSpanWalk/Info.plist;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				LD_RUNPATH_SEARCH_PATHS = (

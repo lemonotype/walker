@@ -32,7 +32,21 @@ Talks standard BLE FTMS + a custom step-count characteristic.
 3. Plug in the iPhone, select it as the destination, press ▶ Run.
    (iPhone needs Developer Mode: Settings → Privacy & Security → Developer Mode.)
 
-## TestFlight
+## TestFlight — headless (recommended)
+
+TestFlight builds expire after 90 days. To push a fresh build with no Xcode
+clicking, put an App Store Connect API key (App Manager/Admin role) in
+`~/.config/bforp/release.env` (`ASC_KEY_ID`, `ASC_ISSUER_ID`, optional
+`ASC_KEY_PATH`; set `WALKER_RELEASE_ENV` to use another file and `TEAM_ID`
+for your own team), then:
+
+```bash
+ios/publish-testflight.sh 1.1      # archives, signs via cloud, uploads
+```
+
+Processing takes ~5–15 minutes; internal testers get the build automatically.
+
+## TestFlight — manual
 1. Do the signing step above once.
 2. In App Store Connect (appstoreconnect.apple.com): *My Apps → + → New App*:
    platform iOS, name "One Foot After", language, **bundle ID
