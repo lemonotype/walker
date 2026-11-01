@@ -128,11 +128,22 @@ The firmware advertises as **"LifeSpan TR1000"** with standard FTMS
 |---|---|---|
 | ![Main screen](docs/photos/app-ios-main.webp) | ![Settings](docs/photos/app-ios-settings.webp) | ![Lock screen](docs/photos/app-ios-lockscreen.webp) |
 
-**Known bug:** the lock-screen play/pause button may still demand Face ID /
-passcode before acting. `authenticationPolicy = .alwaysAllowed` is set (as a
-stored property, as required), but iOS couldn't be reliably convinced —
-sometimes it just works, sometimes it asks. If you figure out the missing
-incantation, a PR would make a lot of walkers happy.
+**Lock-screen play/pause without Face ID — use the Control, not the Live
+Activity button.** Apple's WidgetKit rule: on a locked device, buttons in
+widgets *and Live Activities* are inactive until you unlock — no
+`authenticationPolicy` changes that (we verified ours is correctly compiled as
+`alwaysAllowed`; the rule sits in front of it). iOS 18 **Controls** are the
+surface that honours the policy and runs without unlocking. One-time setup:
+
+1. Lock Screen → long-press → **Customize** → Lock Screen → tap the
+   bottom-left (or right) control → search **Walker** → pick *Walker play /
+   pause*. (Also available in Control Center, and as an **Action button**
+   action on iPhone 15 Pro and later.)
+2. Press it: the treadmill pauses/resumes within a second or two (the app is
+   launched silently in the background to send the command). No Face ID.
+
+The Live Activity's own button still works whenever the phone is unlocked
+(including the "glanced at it, padlock opened" state).
 
 Sideloading needs a Mac with Xcode and an Apple ID (free works, re-sign
 weekly; a paid dev account makes it permanent + TestFlight-able).

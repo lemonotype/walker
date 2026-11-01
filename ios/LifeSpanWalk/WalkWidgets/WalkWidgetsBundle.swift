@@ -5,5 +5,6 @@ import SwiftUI
 struct WalkWidgetsBundle: WidgetBundle {
     var body: some Widget {
         WalkLiveActivity()
+        WalkControl()
     }
 }

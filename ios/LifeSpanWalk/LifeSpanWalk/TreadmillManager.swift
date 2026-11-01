@@ -257,6 +257,19 @@ final class TreadmillManager: NSObject, ObservableObject {
         }
     }
 
+    /// Entry point for the lock-screen Control / Live Activity intent. Awaits
+    /// actual delivery so a cold-launched app stays alive long enough to
+    /// reconnect to the treadmill and send the command (intents get ~30 s).
+    @MainActor
+    func performLockScreenToggle() async {
+        togglePlayPause()
+        let deadline = Date().addingTimeInterval(20)
+        while pendingToggleAt != .distantPast, Date() < deadline {
+            try? await Task.sleep(nanoseconds: 200_000_000)
+        }
+        try? await Task.sleep(nanoseconds: 700_000_000)  // let the BLE write flush
+    }
+
     func togglePlayPause() {
         // lock-screen intents can double-fire or trigger from accidental
         // grazes; a toggle within 1.5s of the previous one is not a human
