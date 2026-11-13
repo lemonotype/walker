@@ -79,6 +79,9 @@ final class TreadmillManager: NSObject, ObservableObject {
         }
         checkMaintenance()
         central = CBCentralManager(delegate: self, queue: .main)
+        linkTimer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { [weak self] _ in
+            self?.checkLinkAlive()
+        }
         NotificationCenter.default.addObserver(
             forName: Notification.Name("lifespan.toggleWalk"),
             object: nil, queue: .main
@@ -144,6 +147,8 @@ final class TreadmillManager: NSObject, ObservableObject {
             distanceM: distanceM, kcal: kcal, steps: steps)
     }
 
+    private var lastDataAt = Date.distantFuture
+    private var linkTimer: Timer?
     private var lastToggle = Date.distantPast
     private var pendingToggleAt = Date.distantPast
     private var pauseAutoEndTimer: Timer?
@@ -350,6 +355,7 @@ final class TreadmillManager: NSObject, ObservableObject {
     // MARK: - incoming data
     private func parseTreadmillData(_ d: Data) {
         guard d.count >= 4 else { return }
+        lastDataAt = Date()
         let flags = UInt16(d[0]) | UInt16(d[1]) << 8
         var i = 2
         speedKmh = Double(UInt16(d[i]) | UInt16(d[i + 1]) << 8) / 100.0
@@ -418,6 +424,8 @@ extension TreadmillManager: CBCentralManagerDelegate, CBPeripheralDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if central.state == .poweredOn {
             central.scanForPeripherals(withServices: [ftmsServiceUUID])
+        } else {
+            linkLost()
         }
     }
 
@@ -436,9 +444,43 @@ extension TreadmillManager: CBCentralManagerDelegate, CBPeripheralDelegate {
 
     func centralManager(_ central: CBCentralManager,
                         didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
+        linkLost()
+        central.scanForPeripherals(withServices: [ftmsServiceUUID])
+    }
+
+    /// Link dropped (power cut, out of range, radio reset). Be honest: an
+    /// active session becomes PAUSED — the belt is stopped or unreachable —
+    /// and nothing auto-resumes on reconnect; the user presses RESUME.
+    private func linkLost() {
         connected = false
         cpChar = nil
-        central.scanForPeripherals(withServices: [ftmsServiceUUID])
+        self.peripheral = nil
+        if sessionActive && !paused {
+            paused = true
+            rampTimer?.invalidate()
+            ramping = false
+            schedulePauseAutoEnd()
+            LiveActivityController.shared.update(state: activityState())
+        }
+    }
+
+    /// Tap-to-rescan: tear down whatever CoreBluetooth thinks it has and
+    /// start over. Recovers from zombie connections after the treadmill
+    /// loses power without a clean disconnect.
+    func rescan() {
+        if let p = peripheral { central.cancelPeripheralConnection(p) }
+        central.stopScan()
+        linkLost()
+        if central.state == .poweredOn {
+            central.scanForPeripherals(withServices: [ftmsServiceUUID])
+        }
+    }
+
+    /// Data normally arrives every second; 12 s of silence while "connected"
+    /// means the peripheral died under us — reset the link.
+    private func checkLinkAlive() {
+        guard connected, Date().timeIntervalSince(lastDataAt) > 12 else { return }
+        rescan()
     }
 
     func centralManager(_ central: CBCentralManager,
@@ -461,6 +503,7 @@ extension TreadmillManager: CBCentralManagerDelegate, CBPeripheralDelegate {
             case cpUUID:
                 cpChar = c
                 peripheral.setNotifyValue(true, for: c)  // indications
+                lastDataAt = Date()
                 connected = true
                 sendRequestControl()
             default:

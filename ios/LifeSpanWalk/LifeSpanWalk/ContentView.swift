@@ -56,12 +56,19 @@ struct ContentView: View {
                 .font(.system(.headline, design: .monospaced).weight(.black))
                 .kerning(2)
             Spacer()
-            Rectangle()
-                .fill(treadmill.connected ? Color.ofaLime : Color.ofaRed)
-                .frame(width: 12, height: 12)
-            Text(treadmill.connected ? "LINK" : "SCAN")
-                .font(.system(.caption2, design: .monospaced).weight(.bold))
-                .foregroundStyle(.secondary)
+            Button { treadmill.rescan() } label: {
+                HStack(spacing: 6) {
+                    Rectangle()
+                        .fill(treadmill.connected ? Color.ofaLime : Color.ofaRed)
+                        .frame(width: 12, height: 12)
+                    Text(treadmill.connected ? "LINK"
+                         : (treadmill.sessionActive ? "LINK LOST" : "SCAN"))
+                        .font(.system(.caption2, design: .monospaced).weight(.bold))
+                        .foregroundStyle(treadmill.connected || !treadmill.sessionActive
+                                         ? .secondary : Color.ofaRed)
+                }
+            }
+            .buttonStyle(.plain)
             Button { showSettings = true } label: {
                 Text("SETTINGS")
                     .font(.system(.caption, design: .monospaced).weight(.black))
