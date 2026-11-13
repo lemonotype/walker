@@ -9,6 +9,8 @@
 # the repo in ~/.config/bforp/release.env — the same file the Breaking for
 # Parts release script uses:
 #   ASC_KEY_ID=...  ASC_ISSUER_ID=...  ASC_KEY_PATH=... (optional)
+#   WALKER_APPLE_ID=...  (optional, numeric app id from App Store Connect;
+#                         makes the upload immune to altool's flaky lookup)
 # Override with WALKER_RELEASE_ENV=/path/to/other.env if you keep a separate one.
 # TEAM_ID defaults to the lemonotype team; set TEAM_ID=... for your own.
 set -euo pipefail
@@ -74,8 +76,12 @@ xcodebuild -quiet -exportArchive -archivePath "$OUT/Walker.xcarchive" \
 
 echo "Walker iOS: uploading to App Store Connect"
 for attempt in 1 2 3; do
+  # WALKER_APPLE_ID (numeric App Store Connect app id, in release.env) skips
+  # altool's bundle-id lookup, which intermittently fails with
+  # "Unable to find Apple ID for Bundle ID".
   if xcrun altool --upload-app -f "$OUT/ipa/LifeSpanWalk.ipa" -t ios \
-       --apiKey "$ASC_KEY_ID" --apiIssuer "$ASC_ISSUER_ID"; then
+       --apiKey "$ASC_KEY_ID" --apiIssuer "$ASC_ISSUER_ID" \
+       ${WALKER_APPLE_ID:+--apple-id "$WALKER_APPLE_ID"}; then
     echo "Uploaded Walker $VERSION ($BUILD). TestFlight processes it in ~5–15 min,"
     echo "then internal testers get it automatically."
     exit 0
